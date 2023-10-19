@@ -1,0 +1,41 @@
+#username{
+  margin-left: 15px;
+  text-align: center;
+  font-family: "Times New Roman";
+  font-size:20px
+}
+#usernameBox{
+  width: 15%;
+  margin-left: 10px;
+  height: 30px;
+  border: wave ;
+  border-collapse: collapse;
+  border-radius: 7px
+}
+#search {
+  background-color: #75ec75;
+  border: none;
+  color: black;
+  padding: 12px 60px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 35px;
+}
+#reset{
+  background-color: #75ec75;
+  border: none;
+  color: black;
+  padding: 12px 60px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 35px;
+}
+.userInfo{
+  margin-top: 40px;
+  border: 1px solid black;
+  border-radius:10px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
