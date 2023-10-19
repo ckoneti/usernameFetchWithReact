@@ -14,11 +14,11 @@ function App() {
             const res = await result.json();
             setProfile(res.items)
         } catch (e) {
-            console.log(`error fetching the data`,e)
+            console.log(`error fetching the data`, e)
         }
     }
 
-    const handleReset = async (e)=>{
+    const handleReset = async (e) => {
         e.preventDefault();
         setProfile([]);
         setUserName();
@@ -35,7 +35,7 @@ function App() {
                                onChange={(e) => setUserName(e.target.value)} required={"true"}></input>
                     </label>
                     <button id="search">SEARCH</button>
-                    <button id="reset" onClick={()=>handleReset}>RESET</button>
+                    <button id="reset" onClick={() => handleReset}>RESET</button>
                 </div>
                 <br></br>
                 <div>
@@ -50,4 +50,5 @@ function App() {
         </>
     );
 }
+
 export default App;
