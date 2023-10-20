@@ -3,7 +3,7 @@ import {useState} from "react";
 import UserInfo from '../src/UserInfo'
 
 function App() {
-    const [username, setUserName] = useState()
+    const [username, setUserName] = useState('')
     const [profile, setProfile] = useState([])
     const API_URL = "https://api.github.com";
 
@@ -18,10 +18,10 @@ function App() {
         }
     }
 
-    const handleReset = async (e) => {
+    const handleReset = (e) => {
         e.preventDefault();
         setProfile([]);
-        setUserName();
+        setUserName('');
     }
     return (
         <>
@@ -31,15 +31,15 @@ function App() {
                     <br></br>
                     <br></br>
                     <label id='username'>UserName:
-                        <input type="text" id="usernameBox" name="usernameBox"
-                               onChange={(e) => setUserName(e.target.value)} required={"true"}></input>
+                        <input type="text" id="usernameBox" name="usernameBox" value={username}
+    onChange={(e) => setUserName(e.target.value)} required/>
                     </label>
                     <button id="search">SEARCH</button>
-                    <button id="reset" onClick={() => handleReset}>RESET</button>
+                    <button id="reset" onClick={handleReset}>RESET</button>
                 </div>
                 <br></br>
                 <div>
-                    {profile.map((p) =>
+                    { profile && profile.map((p) =>
                         <UserInfo key={p.id}
                                   avatar={p.avatar_url}
                                   login={p.login}
